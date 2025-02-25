@@ -11,10 +11,10 @@ export const CONFIG = {
   // Search settings
   search: {
     resultsPerPage: 10,
-    maxSelectableResults: 3,
+    maxSelectableResults: 999,
     provider: 'google' as 'google' | 'bing' | 'exa', // Default search provider
     safeSearch: {
-      google: 'active' as 'active' | 'off',
+      google: 'off' as 'off' | 'off',
       bing: 'moderate' as 'moderate' | 'strict' | 'off',
     },
     market: 'en-US',
@@ -40,7 +40,7 @@ export const CONFIG = {
       },
     },
     ollama: {
-      enabled: true,
+      enabled: false,
       models: {
         'deepseek-r1:1.5b': {
           enabled: false,
@@ -49,7 +49,7 @@ export const CONFIG = {
       },
     },
     openai: {
-      enabled: true,
+      enabled: false,
       models: {
         'gpt-4o': {
           enabled: false,
@@ -66,7 +66,7 @@ export const CONFIG = {
       },
     },
     anthropic: {
-      enabled: true,
+      enabled: false,
       models: {
         'sonnet-3.5': {
           enabled: false,
@@ -79,7 +79,7 @@ export const CONFIG = {
       },
     },
     deepseek: {
-      enabled: true,
+      enabled: false,
       models: {
         chat: {
           enabled: false,
@@ -92,7 +92,7 @@ export const CONFIG = {
       },
     },
     openrouter: {
-      enabled: true,
+      enabled: false,
       models: {
         'openrouter/auto': {
           enabled: false,

@@ -8,13 +8,13 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '')
 
 const generationJsonConfig = {
   temperature: 1,
-  maxOutputTokens: 8192,
+  maxOutputTokens: 24576,
   responseMimeType: 'application/json',
 }
 
 const generationPlainTextConfig = {
   temperature: 1,
-  maxOutputTokens: 8192,
+  maxOutputTokens: 24576,
   responseMimeType: 'text/plain',
 }
 
@@ -36,12 +36,6 @@ const safetySettings = [
     threshold: HarmBlockThreshold.BLOCK_NONE,
   },
 ]
-
-export const geminiFlashLiteModel = genAI.getGenerativeModel({
-  model: 'gemini-2.0-flash-lite-preview-02-05',
-  safetySettings,
-  generationConfig: generationJsonConfig,
-})
 
 export const geminiFlashModel = genAI.getGenerativeModel({
   model: 'gemini-2.0-flash',

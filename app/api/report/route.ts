@@ -5,7 +5,7 @@ import { CONFIG } from '@/lib/config'
 import { extractAndParseJSON } from '@/lib/utils'
 import { generateWithModel } from '@/lib/models'
 
-export const maxDuration = 60
+export const maxDuration = 240
 
 export async function POST(request: Request) {
   try {
